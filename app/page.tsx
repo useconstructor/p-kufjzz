@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { SelectionGuide } from '@/components/brand';
 
 const workshops = [
-  { number: '01', name: 'Primera taza', price: '90.000 COP', material: 'Barro + manos', description: 'Una forma cotidiana como punto de partida: explorar el volumen, levantar paredes y pensar un asa.' },
-  { number: '02', name: 'Torno inicial', price: '120.000 COP', material: 'Barro + movimiento', description: 'Acercarse al torno: conocer el centrado y descubrir cómo cambia la forma con la presión de las manos.' },
-  { number: '03', name: 'Esmaltes y color', price: '75.000 COP', material: 'Superficie + color', description: 'Mirar la cerámica desde su superficie: explorar combinaciones, trazos y posibilidades de acabado.' },
+  { id: 'primera-taza', number: '01', name: 'Primera taza', price: '90.000 COP', material: 'Barro + manos', description: 'Una forma cotidiana como punto de partida: explorar el volumen, levantar paredes y pensar un asa.' },
+  { id: 'torno-inicial', number: '02', name: 'Torno inicial', price: '120.000 COP', material: 'Barro + movimiento', description: 'Acercarse al torno: conocer el centrado y descubrir cómo cambia la forma con la presión de las manos.' },
+  { id: 'esmaltes-y-color', number: '03', name: 'Esmaltes y color', price: '75.000 COP', material: 'Superficie + color', description: 'Mirar la cerámica desde su superficie: explorar combinaciones, trazos y posibilidades de acabado.' },
 ];
 
 function PieceStudies() {
@@ -74,7 +74,7 @@ export default function HomePage() {
               <span className="pt-1 font-heading text-lg text-brand-primary">{workshop.number}</span>
               <div><p className="mb-1 text-sm text-brand-muted">{workshop.material}</p><h3 className="font-heading text-[28px] leading-tight tracking-[-.03em] text-brand-primary lg:text-3xl">{workshop.name}</h3></div>
               <p className="col-start-2 max-w-md text-base leading-6 md:col-start-auto">{workshop.description}</p>
-              <div className="col-start-2 md:col-start-auto md:text-right"><p className="font-heading text-xl font-semibold text-brand-primary">{workshop.price}</p><p className="text-sm text-brand-muted">Por persona · 2 h</p><Link href="/talleres" aria-label={`Ver talleres: ${workshop.name}`} className="brand-link mt-1">Ver experiencia <span aria-hidden="true">↗</span></Link></div>
+              <div className="col-start-2 md:col-start-auto md:text-right"><p className="font-heading text-xl font-semibold text-brand-primary">{workshop.price}</p><p className="text-sm text-brand-muted">Por persona · 2 h</p><Link href={`/reservar?opcion=${workshop.id}`} aria-label={`Reservar: ${workshop.name}`} className="brand-link mt-1">Ver experiencia <span aria-hidden="true">↗</span></Link></div>
             </article>
           ))}
         </div>

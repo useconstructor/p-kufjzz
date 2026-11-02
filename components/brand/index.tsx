@@ -25,7 +25,7 @@ export function BrandShell({ children, className }: { children: ReactNode; class
   const menu = useNativeBookingDialog({ triggerRef: menuTrigger, onClose: () => setMenuOpen(false) });
   useEffect(() => { menu.close(); }, [pathname, menu.close]);
   return <div className={cx('min-h-screen', className)}>
-    <a href="#contenido" className="fixed top-2 left-5 z-50 -translate-y-24 bg-brand-primary px-5 py-3 text-brand-background focus:translate-y-0">Saltar al contenido</a>
+    <a href="#contenido" className="sr-only focus:not-sr-only focus:block focus:w-fit focus:bg-brand-primary focus:px-5 focus:py-3 focus:text-brand-background">Saltar al contenido</a>
     <header className="border-b border-brand-primary/25">
       <div className="mx-auto flex h-14 max-w-[1280px] items-center justify-between gap-5 px-5 md:h-20 md:px-8 xl:px-0">
         <BrandLogo />
@@ -61,8 +61,19 @@ export function BrandSteps({ current, className }: { current: string; className?
   return <nav aria-label="Pasos de tu reserva" className={cx('relative mb-4 border-b border-brand-primary/30', className)}><ol className="grid grid-cols-3">{steps.map((step, index) => <li key={step.key} aria-current={index === active ? 'step' : undefined} className={cx('py-2 text-[14px] leading-5 font-semibold', index === active ? 'text-brand-primary' : 'text-brand-muted')}>{step.label}</li>)}</ol>{active >= 0 && <span aria-hidden="true" className="absolute bottom-0 left-0 h-[3px] w-1/3 bg-brand-primary transition-transform duration-200 motion-reduce:transition-none" style={{ transform: `translateX(${active * 100}%)` }} />}</nav>;
 }
 
+export function CraftStudy({ name, className }: { name: string; className?: string }) {
+  const kind = /taza/i.test(name) ? 'cup' : /torno/i.test(name) ? 'wheel' : /esmalte|color/i.test(name) ? 'color' : null;
+  if (!kind) return null;
+  return <svg viewBox="0 0 180 120" fill="none" role="img" aria-label={`Estudio ilustrado: ${name}. Referencia de técnica, no resultado garantizado.`} className={cx('h-auto w-32 text-brand-primary', className)}>
+    <path d="M12 103C-2 47 38 7 91 9C151 9 179 45 166 86" stroke="currentColor" strokeWidth="1.5" opacity=".35" />
+    <g stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      {kind === 'cup' ? <><path d="M43 39Q74 28 107 39L103 88Q76 103 47 88Z" fill="#C65D42" fillOpacity=".22" /><ellipse cx="75" cy="39" rx="32" ry="8" /><path d="M108 47C145 34 147 87 105 80M109 58C128 50 129 72 107 70M52 61L54 79M61 66L63 87" /><path d="M32 104Q85 112 136 100" opacity=".4" /></> : kind === 'wheel' ? <><ellipse cx="90" cy="95" rx="64" ry="12" /><path d="M57 48Q90 61 123 48L115 79Q91 91 65 79Z" fill="#C65D42" fillOpacity=".3" /><ellipse cx="90" cy="48" rx="33" ry="9" /><path d="M61 59Q90 71 120 59M64 70Q89 81 117 70M78 107V114M103 107V114M23 76Q13 61 27 48M24 48L27 57M27 48L18 49" /></> : <><path d="M38 29L78 24L85 72L45 78Z" fill="#254DA6" /><path d="M99 38L139 44L132 91L92 85Z" fill="#C65D42" /><path d="M58 79L97 76L100 108L61 111Z" fill="#F5F0E7" /><path d="M102 53L128 57M100 63L126 67M69 88L88 87M70 97L89 96" /><circle cx="57" cy="38" r="3" fill="#F5F0E7" stroke="none" /></>}
+    </g>
+  </svg>;
+}
+
 export function WorkshopEdge({ serviceName, status = 'neutral', children, action, className }: { serviceName?: string; status?: 'neutral' | 'pending' | 'warning' | 'confirmed' | 'cancelled'; children?: ReactNode; action?: ReactNode; className?: string }) {
-  return <section data-workshop-edge data-status={status} className={cx('border-t-[3px] border-brand-primary bg-brand-primary/[.035] px-4 py-3 md:px-6 md:py-5', status === 'warning' && 'border-brand-accent', status === 'confirmed' && 'border-brand-success', className)}>{serviceName && <h2 className="mb-2 font-heading text-2xl font-semibold text-brand-primary">{serviceName}</h2>}{children}{action && <div className="mt-4 flex flex-wrap items-center gap-3">{action}</div>}</section>;
+  return <section data-workshop-edge data-status={status} className={cx('border-t-[3px] border-brand-primary bg-brand-primary/[.035] px-4 py-3 md:px-6 md:py-5', status === 'warning' && 'border-brand-accent', status === 'confirmed' && 'border-brand-success', className)}>{serviceName && <div className="mb-3 flex items-center justify-between gap-4"><h2 className="font-heading text-2xl font-semibold tracking-[-.035em] text-brand-primary md:text-3xl">{serviceName}</h2><CraftStudy name={serviceName} className="w-20 shrink-0 md:w-28" /></div>}{children}{action && <div className="mt-4 flex flex-wrap items-center gap-3">{action}</div>}</section>;
 }
 
 export function BrandNotice({ kind, title, children, action, className }: { kind: 'info' | 'warning' | 'error' | 'success'; title: string; children?: ReactNode; action?: ReactNode; className?: string }) {
