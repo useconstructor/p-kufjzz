@@ -22,14 +22,14 @@ export function ContextMedia({ resource, variant, onReady, className }: { resour
   const opener = useRef<HTMLButtonElement>(null);
   const dialog = useNativeBookingDialog({ triggerRef: opener });
   const compact = variant === 'compact';
-  const frame = compact ? 'h-[104px] w-full sm:h-[128px]' : 'aspect-[5/4] w-full';
+  const frame = compact ? 'h-[96px] w-full sm:h-[128px]' : 'aspect-[5/4] w-full';
   return <figure className={cn('grid min-w-0 grid-cols-1 grid-rows-[auto_auto_auto] items-start gap-y-1', className)}>
     <VerifiedBookingMedia resource={resource} containerClassName={cn('relative row-start-1 grid min-h-0 place-items-center bg-brand-text/[.045]', frame)} className="absolute inset-0 h-full w-full object-contain object-center"
       onReady={(current, ready) => { if (current) onReady?.(current, ready); }}
       onDispose={current => { if (current) onReady?.(current, false); }}
       renderPending={<span role="status" className="p-3 text-sm">Cargando fotografía…</span>}
       renderError={({ retry }) => <div role="alert" className="flex h-full w-full flex-col items-start justify-center gap-1 p-2 text-sm leading-4"><span>Fotografía no disponible.</span><button type="button" onClick={retry} className={cn(textLinkClass, 'text-sm')}><RefreshCw size={14} aria-hidden="true" /> Reintentar imagen</button></div>} />
-    <button ref={opener} type="button" onClick={dialog.open} className={cn(textLinkClass, 'row-start-2 min-h-11 w-fit max-w-full gap-1 text-left text-xs leading-4')}><span>Ver fotografía<span className="inline-block whitespace-nowrap"> completa <ArrowRight className="inline-block" size={12} aria-hidden="true" /></span></span></button>
+    <button ref={opener} type="button" onClick={dialog.open} aria-label="Ver fotografía completa" className={cn(textLinkClass, 'row-start-2 min-h-8 w-fit max-w-full gap-1 text-left text-xs leading-4')}><span className="whitespace-nowrap">Foto completa <ArrowRight className="inline-block" size={12} aria-hidden="true" /></span></button>
     {!compact && <PhotoCredit />}
     <dialog ref={dialog.dialogRef} aria-label="Fotografía completa de manos modelando barro en el torno" className="m-auto w-[min(92vw,960px)] max-w-none rounded-[var(--brand-radius)] border border-[var(--brand-text)] bg-[var(--brand-background)] p-4 text-[var(--brand-text)] backdrop:bg-black/65 sm:p-6">
       <div className="mb-3 flex items-center justify-between gap-3"><h2 className="font-[family-name:var(--brand-font-heading)] text-xl">Manos en el torno</h2><Action secondary onClick={() => dialog.close()} aria-label="Cerrar fotografía"><X size={18} aria-hidden="true" /></Action></div>

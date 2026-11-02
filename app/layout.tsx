@@ -13,5 +13,5 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const roles = { '--brand-background': branding.backgroundColor, '--brand-surface': branding.backgroundColor, '--brand-primary': branding.primaryColor, '--brand-accent': branding.secondaryColor, '--brand-text': branding.textColor, '--brand-font-heading': `"${branding.fontHeading}", sans-serif`, '--brand-font-body': `"${branding.fontBody}", sans-serif`, '--brand-radius': branding.borderRadius } as CSSProperties;
-  return <html lang="es" style={roles}><body><BrandShell>{children}</BrandShell><Script src={process.env.NEXT_PUBLIC_CONSTRUCTOR_API + '/v1/projects/' + process.env.NEXT_PUBLIC_PROJECT_ID + '/analytics/script.js'} strategy="afterInteractive" /></body></html>;
+  return <html lang="es" style={roles}><body><BrandShell>{children}</BrandShell><Script src="/constructor-analytics.js" strategy="afterInteractive" /></body></html>;
 }
