@@ -48,7 +48,7 @@ export default function HomePage() {
             </svg>
             <figure className="relative mx-3 md:mx-5">
               <div className="border border-brand-primary/30 bg-brand-text/[.04] p-2 md:p-3">
-                <img src="/images/booking-context-1-v1.jpg" alt="Manos de una persona trabajando el barro en una pieza de cerámica." width={960} height={640} fetchPriority="high" className="block h-auto max-h-[510px] w-full object-contain" />
+                <img src="/images/booking-context-1-v1.jpg" alt="Manos de una persona trabajando el barro en una pieza de cerámica." width={2500} height={2000} fetchPriority="high" className="block h-auto max-h-[510px] w-full object-contain" />
               </div>
               <figcaption className="mt-3 flex items-start justify-between gap-4 text-sm leading-5 text-brand-muted">
                 <span>El gesto: manos dando forma al barro.<br />Fotografía representativa.</span>

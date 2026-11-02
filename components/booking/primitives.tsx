@@ -22,7 +22,7 @@ export function ContextMedia({ resource, variant, onReady, className }: { resour
   const opener = useRef<HTMLButtonElement>(null);
   const dialog = useNativeBookingDialog({ triggerRef: opener });
   const compact = variant === 'compact';
-  const frame = compact ? 'h-[104px] w-full sm:h-[128px]' : variant === 'ritual' ? 'aspect-[4/3] w-full' : 'aspect-[4/3] w-full md:aspect-[16/10]';
+  const frame = compact ? 'h-[104px] w-full sm:h-[128px]' : 'aspect-[5/4] w-full';
   return <figure className={cn('grid min-w-0 grid-cols-1 grid-rows-[auto_auto_auto] items-start gap-y-1', className)}>
     <VerifiedBookingMedia resource={resource} containerClassName={cn('relative row-start-1 grid min-h-0 place-items-center bg-brand-text/[.045]', frame)} className="absolute inset-0 h-full w-full object-contain object-center"
       onReady={(current, ready) => { if (current) onReady?.(current, ready); }}

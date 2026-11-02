@@ -31,6 +31,7 @@ export function PrivateRecords({ mode, id = '', codigo = '' }: { mode: 'history'
   const authorizedRead = useRef<{ identity: string; id: string } | null>(null);
   const openedRecord = useRef<{ identity: string; id: string } | null>(null);
   const [busy, setBusy] = useState(false);
+  const [copyMessage, setCopyMessage] = useState<{ id: string; message: string } | null>(null);
   const lock = useRef(false);
   const sequence = useRef(0);
   const trigger = useRef<HTMLButtonElement>(null);
@@ -89,7 +90,7 @@ export function PrivateRecords({ mode, id = '', codigo = '' }: { mode: 'history'
     finally { lock.current = false; setBusy(false); }
   };
   return <BrandPage title={mode === 'history' ? 'Tus reservas' : mode === 'confirmation' ? 'Tu vuelta al barro.' : 'Tu mesa de cerámica.'} subtitle="Reservas privadas de esta sesión · Demostración sin pagos ni mensajes.">
-    <div className="max-w-4xl pb-8">
+    <div className="w-full pb-2 md:pb-4">
       <SessionProblem state={state} controller={controller} />
       <DraftConflictPanel state={state} controller={controller} />
       {state.pending && <RecoveryPanel state={state} controller={controller} onRecovered={result => { if (mode === 'history' || result.id === record?.id || result.id === id || result.codigo === codigo) void reload(); else router.push(detailHref(result)); }} onNewIntent={() => void reload()} />}
@@ -102,6 +103,7 @@ export function PrivateRecords({ mode, id = '', codigo = '' }: { mode: 'history'
         <section className="border-t-2 border-brand-primary pt-5">
           {verified && <p role="status" className="mb-3 text-base font-semibold text-brand-primary">{record.estado === 'activa' ? 'Tu reserva está lista.' : 'Tu reserva está cancelada.'}</p>}
           <WorkshopEdge serviceName={record.opcionNombre} status={!verified ? 'neutral' : record.estado === 'activa' ? 'confirmed' : 'cancelled'} className="bg-transparent"><p className="font-heading text-2xl leading-tight text-brand-primary sm:text-3xl">{formatDate(record.fecha)}<span className="mt-1 block">{record.hora} · Hora de Colombia</span></p><p className="mt-4 text-xl">{record.personas} personas · {record.duracionMinutos / 60} h de taller</p><p className="mt-4 text-xl font-semibold">{money(record.precio * record.personas, record.moneda)} por el grupo</p><p className="mt-1 text-sm">{money(record.precio, record.moneda)} por persona · Precio de demostración, sin cobro.</p><p className="mt-4 text-sm text-brand-muted">{verified ? (record.estado === 'activa' ? 'Activa' : 'Cancelada') : `Último estado verificado: ${record.estado === 'activa' ? 'activa' : 'cancelada'}`} · Código {record.codigo}</p></WorkshopEdge>
+          <div className="mt-3"><Action secondary disabled={!verified || busy} onClick={async () => { const saved = record; try { await navigator.clipboard.writeText(saved.codigo); setCopyMessage({ id: saved.id, message: 'Código copiado.' }); } catch { setCopyMessage({ id: saved.id, message: 'No pudimos copiarlo. Puedes seleccionar el código que aparece arriba.' }); } }}>Copiar código</Action>{copyMessage?.id === record.id && <p role="status" className="mt-2 text-sm">{copyMessage.message}</p>}</div>
         </section>
         <div className="my-5 grid grid-cols-[112px_1fr] gap-4 sm:grid-cols-[180px_1fr]">{record.recursos[0] && <ContextMedia resource={record.recursos[0]} variant="compact" />}<div><p>{record.opcionDescripcion}</p><p className="mt-2 text-sm text-brand-muted">Fotografía representativa del proceso; no muestra resultados ni clientes de Vuelta.</p></div></div>
         <h2 className="mt-8 border-t border-brand-primary/30 pt-5 font-heading text-2xl text-brand-primary">Los datos de tu reserva</h2>
