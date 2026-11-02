@@ -1,0 +1,974 @@
+{
+  "tone": "trustworthy",
+  "fontBody": "Source Sans 3",
+  "logoText": "Vuelta",
+  "brandbook": {
+    "motif": "Arco continuo de torno unido al borde de una mesa de trabajo. En portada contiene visualmente el encuentro entre manos y barro; en interiores señala la experiencia seleccionada y la continuidad del recorrido. No representa ocho plazas ni otra cantidad que pudiera confundirse con capacidad.",
+    "pages": [
+      {
+        "id": "brand-page-1",
+        "title": "Brand guidelines",
+        "layout": "cover",
+        "summary": "Identidad original propuesta para un taller ficticio de cerámica en Laureles, Medellín. Una invitación cercana a hacer una pausa de dos horas con barro, torno y color.",
+        "examples": [
+          {
+            "text": "Vuelta · Taller de cerámica",
+            "title": "Dale forma a tu pausa."
+          },
+          {
+            "text": "Place hands and clay beneath the headline. Give the name, symbol and photograph separate breathing room; never overlay the working hands.",
+            "title": "Cover composition"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-2",
+        "title": "The Brand",
+        "layout": "divider",
+        "summary": "Use a cobalt divider to introduce the identity. One plaster headline and a single table-edge line establish the workshop rhythm without decorative numbering.",
+        "examples": [
+          {
+            "text": "Barro, torno y color. Tres maneras de acercarte a la cerámica con Vuelta.",
+            "title": "Una mesa para empezar."
+          }
+        ]
+      },
+      {
+        "id": "brand-page-3",
+        "title": "Welcome",
+        "layout": "content",
+        "summary": "This guide presents an original identity proposed for this project, with examples of its visual and editorial use.",
+        "examples": [
+          {
+            "text": "Vuelta es un negocio ficticio. La ubicación y los precios son de ejemplo.",
+            "title": "Public notice"
+          },
+          {
+            "text": "The brief supplies the catalog, schedule, palette and fonts. The supplied Wikimedia photograph is representative, not evidence of Vuelta premises.",
+            "title": "Source boundary"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-4",
+        "title": "Index",
+        "layout": "content",
+        "summary": "Read foundations before applications. Keep these page ranges together so logo, typography and color rules remain easy to find during design reviews.",
+        "examples": [
+          {
+            "text": "01–04 Introduction · 05–08 Definition and voice · 09–15 Logo · 16–21 Typography · 22 Layouts",
+            "title": "01–22 · Foundations"
+          },
+          {
+            "text": "23–25 Colors · 26–29 Graphic language · 30–48 Applications · 49 Colophon",
+            "title": "23–49 · Expression"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-5",
+        "title": "Defining",
+        "layout": "content",
+        "summary": "Describe Vuelta as a ceramics workshop, not a spa or object shop. Connect each invitation to materials, a two-hour experience and a clear next action.",
+        "examples": [
+          {
+            "text": "Conoce tres experiencias de dos horas: primera taza, torno inicial y esmaltes y color.",
+            "title": "Vuelta · Taller de cerámica"
+          },
+          {
+            "text": "Use hands, clay texture and reference pieces. Avoid candles, wellness claims, shopping bags and product-buying language.",
+            "title": "Editorial focus"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-6",
+        "title": "Vision & Mission",
+        "layout": "content",
+        "summary": "Treat these as proposed communication aims, not established corporate claims. Invite exploration, then make choosing and reviewing a workshop straightforward.",
+        "examples": [
+          {
+            "text": "Dale forma a tu pausa.",
+            "title": "Invitation"
+          },
+          {
+            "text": "Explora los talleres, elige un turno y revisa tus datos antes de guardar.",
+            "title": "Practical direction"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-7",
+        "title": "Brand Values",
+        "layout": "content",
+        "summary": "Express proposed design principles through visible choices: material honesty, clear information and continuity. Do not present invented credentials or service guarantees as values.",
+        "examples": [
+          {
+            "text": "Label an external cup photograph «Pieza de referencia», never «Hecha en Vuelta».",
+            "title": "Material honesty"
+          },
+          {
+            "text": "Keep «primera taza» visible from selection through review. Preserve entered information when a turn becomes unavailable.",
+            "title": "Clarity and continuity"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-8",
+        "title": "Tone of Voice",
+        "layout": "content",
+        "summary": "Write public copy in natural Colombian Spanish. Prefer short verbs and concrete nouns. Be warm without therapy language, exaggerated outcomes or invented social proof.",
+        "examples": [
+          {
+            "text": "Elige tu taller. Consulta los turnos disponibles y continúa con tus datos.",
+            "title": "Use"
+          },
+          {
+            "text": "Do not write «Transforma tu vida», «Cientos de alumnos felices» or «Tu santuario de bienestar».",
+            "title": "Avoid"
+          },
+          {
+            "text": "No pudimos cargar los turnos. Tus datos siguen aquí. Intenta de nuevo.",
+            "title": "When something fails"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-9",
+        "title": "Logo",
+        "layout": "divider",
+        "summary": "Introduce the logo system on Warm Clay. Show the cobalt symbol on a plaster support and set Vuelta separately in live typography; neither element becomes a photograph overlay.",
+        "examples": [
+          {
+            "text": "Taller de cerámica",
+            "title": "Vuelta"
+          },
+          {
+            "text": "Use one large lockup aligned to the table edge. Leave the remaining clay field open rather than repeating the symbol as wallpaper.",
+            "title": "Divider placement"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-10",
+        "title": "Logo overview",
+        "layout": "logo",
+        "summary": "The system pairs an open circular turn with a horizontal table edge. Use the supplied geometric master for the symbol and preserve the exact name Vuelta.",
+        "examples": [
+          {
+            "text": "Vuelta — uppercase V, lowercase uelta. Do not change it to VUELTA, Vuelta Studio or Taller Cerámica Vuelta in the logo.",
+            "title": "Name treatment"
+          },
+          {
+            "text": "Use the complete symbol with the name for introductions; use the symbol alone only where Vuelta is already identified.",
+            "title": "System components"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-11",
+        "title": "Primary logo",
+        "layout": "logo",
+        "summary": "Place the symbol left of Vuelta in Bricolage Grotesque 700. Match the visible symbol height to 1.25 times the name’s cap height and separate them by half a cap height.",
+        "examples": [
+          {
+            "text": "Cobalt symbol + Vuelta on plaster. Keep the name in real typography, not inside the symbol SVG.",
+            "title": "Header lockup"
+          },
+          {
+            "text": "Set «Taller de cerámica» below Vuelta in Source Sans 3 400, aligned with the V rather than the symbol.",
+            "title": "Descriptor lockup"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-12",
+        "title": "Logo Safezone",
+        "layout": "logo",
+        "summary": "Let x equal the symbol’s 14-unit band thickness. Keep at least 2x clear around visible logo geometry; increase to 3x beside photography, buttons or a page edge.",
+        "examples": [
+          {
+            "text": "At a 40 px symbol canvas, x is 3.5 px. Leave at least 7 px around the lockup and 10.5 px before navigation.",
+            "title": "Header spacing"
+          },
+          {
+            "text": "Keep the Vuelta lockup outside the hands-and-clay crop. The image edge must not enter its 3x photographic safezone.",
+            "title": "Photographic boundary"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-13",
+        "title": "Color combinations",
+        "layout": "colors",
+        "summary": "Prefer cobalt on plaster. On cobalt, clay or charcoal applications, retain the original cobalt symbol on a plaster support; do not recolor individual parts of its geometry.",
+        "examples": [
+          {
+            "text": "Vuelta in #254DA6 on #F5F0E7. Use the same pairing for navigation and selected workshop labels.",
+            "title": "Primary pairing"
+          },
+          {
+            "text": "On #242B32, set the separate name in plaster and place the complete cobalt symbol on a plaster support with its safezone intact.",
+            "title": "Dark application"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-14",
+        "title": "Brandmark",
+        "layout": "logo",
+        "summary": "The open turn meets a table edge in one continuous band. Preserve the master’s proportions, opening and orientation. It suggests making, not a capacity count or loading spinner.",
+        "examples": [
+          {
+            "text": "Use the complete symbol at 24 px or larger in interface placements. Do not close its opening or remove the horizontal ending.",
+            "title": "Small use"
+          },
+          {
+            "text": "Place a small arc cue beside «primera taza» and a text label «Seleccionado». Never use eight repeated symbols to represent seats.",
+            "title": "Selection cue"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-15",
+        "title": "Logo misuse",
+        "layout": "logo",
+        "summary": "Do not stretch, rotate, outline, texture or crop the logo. Keep the mark distinct from interface arcs, and do not replace the V in Vuelta with the symbol.",
+        "examples": [
+          {
+            "text": "No cracked texture, bevel or ceramic glaze effect inside the Vuelta symbol. Material character belongs in photography.",
+            "title": "Avoid simulated clay"
+          },
+          {
+            "text": "Do not bend Vuelta around the arc, rotate it like a wheel or place the name inside a boxed initial.",
+            "title": "Avoid unstable lockups"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-16",
+        "title": "Typography",
+        "layout": "divider",
+        "summary": "Use Bricolage Grotesque for expressive headings and Source Sans 3 for reading and tasks. Introduce the pair with one large invitation, not a directory of font names.",
+        "examples": [
+          {
+            "text": "Elige una experiencia de dos horas con barro, torno o color.",
+            "title": "Dale forma a tu pausa."
+          },
+          {
+            "text": "Place the headline above one table-edge rule. Keep supporting copy short and left-aligned.",
+            "title": "Divider rhythm"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-17",
+        "title": "Typography overview",
+        "layout": "type",
+        "summary": "Keep a two-family system. Bricolage establishes personality; Source Sans keeps prices, schedules and forms calm and legible. Supplied files cover weights 400, 500, 600 and 700.",
+        "examples": [
+          {
+            "text": "Compara los talleres y elige el que quieres explorar.",
+            "title": "Tres maneras de empezar"
+          },
+          {
+            "text": "Use Bricolage for the headline and workshop names. Use Source Sans for duration, price, controls and explanatory copy.",
+            "title": "Family roles"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-18",
+        "title": "Primary typeface",
+        "layout": "type",
+        "summary": "Set Bricolage Grotesque headings in sentence case at 600–700. Preserve its humanist character with normal-width letters and restrained line breaks; never substitute a decorative serif.",
+        "examples": [
+          {
+            "text": "Primera taza, torno inicial o esmaltes y color. Encuentra tu punto de partida.",
+            "title": "Una mesa, tres comienzos."
+          },
+          {
+            "text": "Use 700 for the main invitation and 600 for workshop headings. Keep short names together instead of breaking «primera taza» across lines.",
+            "title": "Headline setting"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-19",
+        "title": "Typography",
+        "layout": "type",
+        "summary": "Use upright 700 for major headings, 600 for subheads and step labels, and 400 for body copy. Reserve 500 for quiet emphasis. Do not synthesize bold or introduce an unsupported italic.",
+        "examples": [
+          {
+            "text": "Comprueba el taller, el turno, las personas y tus datos de contacto.",
+            "title": "Revisa antes de guardar"
+          },
+          {
+            "text": "Bricolage 700: «Revisión». Source Sans 600: «Tus datos». Source Sans 400: «Todavía no se ha guardado una reserva».",
+            "title": "Weight specimen"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-20",
+        "title": "Supporting type",
+        "layout": "type",
+        "summary": "Set Source Sans 3 body copy and fields at 16/24 px. Use visible labels rather than placeholders alone, and keep dates, contact details and reservation codes easy to scan.",
+        "examples": [
+          {
+            "text": "Nombre, email y teléfono. Puedes añadir una nota opcional antes de revisar.",
+            "title": "Tus datos"
+          },
+          {
+            "text": "Use 14/20 px at 600 for step labels and at least 12/18 px for photo credits. Field labels remain 16 px.",
+            "title": "Small-text floor"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-21",
+        "title": "Hierarchy",
+        "layout": "type",
+        "summary": "Set hero type at 76/80 desktop, 52/56 tablet and 40/42 mobile. Interior titles use 40/44, reducing to 28/32 on mobile. Keep body text at 16/24.",
+        "examples": [
+          {
+            "text": "Elige una fecha y consulta los comienzos disponibles.",
+            "title": "Taller y turno"
+          },
+          {
+            "text": "On booking screens, place title, current step, chosen workshop and next available turn before supporting explanations.",
+            "title": "Reading order"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-22",
+        "title": "Layouts",
+        "layout": "applications",
+        "summary": "Compose a shared workshop table, not identical cards. Align image, selection and controls to one horizontal edge. Use 4, 8, 12, 16, 24, 32, 48 and 64 px spacing.",
+        "examples": [
+          {
+            "text": "Give the hands photograph the widest area. Place «Reservar ahora» in its own lower margin; vary reference-image sizes across the shared surface.",
+            "title": "Desktop table"
+          },
+          {
+            "text": "At 390×600, budget about 56 px for header, 28 for notice, 40 for steps and 76 for context. Expose option, date and next turn without autofocus.",
+            "title": "Mobile arrival"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-23",
+        "title": "Colors",
+        "layout": "divider",
+        "summary": "Use plaster as the working surface, cobalt as structure and clay as material warmth. Charcoal carries reading text; Quiet Earth supports secondary information.",
+        "examples": [
+          {
+            "text": "Set «Dale forma a tu pausa.» in cobalt over plaster. Let the real clay in the photograph provide texture rather than adding beige effects.",
+            "title": "A cobalt-led workshop"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-24",
+        "title": "Colors overview",
+        "layout": "colors",
+        "summary": "Preserve all five palette values. Keep functional selection cobalt, reading text charcoal and clay surfaces selective so the identity does not drift toward a spa aesthetic.",
+        "examples": [
+          {
+            "text": "Workshop Plaster #F5F0E7: background. Warm Clay #C65D42: secondary surface and material accent.",
+            "title": "Ground and surface"
+          },
+          {
+            "text": "Turning Cobalt #254DA6: accent. Kiln Charcoal #242B32: text. Quiet Earth #625B55: muted copy.",
+            "title": "Action and reading"
+          },
+          {
+            "text": "Use plaster text on cobalt controls. Keep small text off clay surfaces; place it on a plaster inset instead.",
+            "title": "Accessible pairing"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-25",
+        "title": "Using Tints",
+        "layout": "colors",
+        "summary": "Keep logo and primary controls at full color. Restrict cobalt tints to quiet supporting areas over plaster; do not create new named brand colors or reduce text opacity.",
+        "examples": [
+          {
+            "text": "A 10% cobalt overlay on plaster may sit behind «Taller seleccionado». Keep its label and outline solid cobalt.",
+            "title": "Selection surface"
+          },
+          {
+            "text": "Show «17:00 · Sin cupo» with a clear label and muted text. A pale fill alone must not communicate unavailability.",
+            "title": "Unavailable turn"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-26",
+        "title": "Graphic Elements",
+        "layout": "divider",
+        "summary": "Extend the identity with table-edge rules and open arcs, not scattered circles. Animate only explicit selection or validated progress, for 160–220 ms without moving the page.",
+        "examples": [
+          {
+            "text": "When «torno inicial» is chosen, move the supporting arc toward its reference and retain the visible workshop name.",
+            "title": "Selection arc"
+          },
+          {
+            "text": "Change the arc and step state immediately. Keep «Tus datos» and visible focus; remove animated drawing and translation.",
+            "title": "Reduced motion"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-27",
+        "title": "Icons",
+        "layout": "content",
+        "summary": "Use simple 24 px line icons with consistent 2 px strokes. Pair unfamiliar actions with text, preserve 44 px targets and avoid borrowing decorative pottery pictograms for navigation.",
+        "examples": [
+          {
+            "text": "Pair a calendar with «Fecha» and a people icon with «Asistentes». Keep the number 1–4 visible in its control.",
+            "title": "Calendar and people"
+          },
+          {
+            "text": "Use «Cancelar reserva» beside its icon. Do not communicate a destructive action through coral color or a trash symbol alone.",
+            "title": "Cancellation"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-28",
+        "title": "Photography",
+        "layout": "applications",
+        "summary": "Use sharp documentary photographs with intact texture. The supplied hands image introduces process; separately licensed piece references explain workshops. Never present external work as Vuelta products.",
+        "examples": [
+          {
+            "text": "Foto representativa tomada en Egipto: Violinistman, CC BY 4.0, Wikimedia Commons. Recorte de encuadre; no muestra el local de Vuelta.",
+            "title": "Main image credit"
+          },
+          {
+            "text": "Keep the working hands and clay visible, with no text over them. Use a compact, subject-preserving context image in booking.",
+            "title": "Crop and placement"
+          },
+          {
+            "text": "Label licensed cup, turned-piece and glaze images «Pieza de referencia». If an image is unavailable, recompose with text rather than fabricate it.",
+            "title": "Reference coverage"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-29",
+        "title": "Moodboard",
+        "layout": "applications",
+        "summary": "Choose the editorial workshop table over a full-bleed cobalt poster or sample-led notebook. Combine documentary hands, cobalt structure, humanist type and asymmetrical reference arrangements.",
+        "examples": [
+          {
+            "text": "Sharp clay texture, a shared plaster plane, one cobalt table edge and workshop names close to their reference photographs.",
+            "title": "Keep"
+          },
+          {
+            "text": "Spa imagery, cream-and-serif styling, identical cards, decorative numbers, fake testimonials and isolated product cutouts.",
+            "title": "Leave out"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-30",
+        "title": "Applications",
+        "layout": "divider",
+        "summary": "Label every application as a design study. Carry the table edge, cobalt hierarchy and humanist typography into each format without suggesting an account, shop or service that is not planned.",
+        "examples": [
+          {
+            "text": "Vuelta · Barro, torno y color.",
+            "title": "La misma mesa, otro formato."
+          },
+          {
+            "text": "Use «Design study» in presentation captions, outside the public-facing artwork. Do not place production notes in the interface.",
+            "title": "Design study label"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-31",
+        "title": "Social media icons",
+        "layout": "logo",
+        "summary": "Design study: center the complete cobalt symbol on plaster within the circular crop. Keep at least 20% inset and omit the descriptor at avatar size.",
+        "examples": [
+          {
+            "text": "Taller de cerámica",
+            "title": "Vuelta"
+          },
+          {
+            "text": "Use the same open-turn master as the website. Do not add a V, a wheel illustration or a clay-colored ring.",
+            "title": "Avatar geometry"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-32",
+        "title": "Social media profiles",
+        "layout": "applications",
+        "summary": "Design study: lead with Vuelta and a short materials-based description. Keep the conceptual location explicit and avoid invented handles, audience counts or contact channels.",
+        "examples": [
+          {
+            "text": "Taller de cerámica de demostración. Barro, torno y color. Ubicación conceptual: Laureles, Medellín.",
+            "title": "Dale forma a tu pausa."
+          },
+          {
+            "text": "Avatar first, invitation second, workshop link third. Use «Ver talleres» without inventing an external profile URL.",
+            "title": "Profile structure"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-33",
+        "title": "Instagram posts",
+        "layout": "applications",
+        "summary": "Design study: alternate process, reference and practical information posts. Use one shared edge across a carousel, but vary image scale rather than repeating a three-card template.",
+        "examples": [
+          {
+            "text": "Conoce primera taza, una experiencia de 2 h. Precio de ejemplo: 90.000 COP.",
+            "title": "Primero, el barro."
+          },
+          {
+            "text": "Explora esmaltes y color. Consulta la experiencia y elige un turno disponible.",
+            "title": "Color sobre la mesa"
+          },
+          {
+            "text": "Keep credits accessible in the caption. A representative glaze photograph must not be described as a result made in Vuelta.",
+            "title": "Image rule"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-34",
+        "title": "Posters",
+        "layout": "applications",
+        "summary": "Design study: build a poster from one large headline, documentary image and clear lower information strip. Keep the action outside the hands and the schedule legible at reading distance.",
+        "examples": [
+          {
+            "text": "Vuelta · Talleres de 2 h. Martes a domingo: comienzos 10:00, 14:00 y 17:00.",
+            "title": "Dale forma a tu pausa."
+          },
+          {
+            "text": "Ubicación conceptual: Laureles, Medellín. Conoce las tres experiencias en Talleres.",
+            "title": "Location line"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-35",
+        "title": "T shirts and totes",
+        "layout": "applications",
+        "summary": "Design study: use a single cobalt print on a plaster-colored textile. Place the small complete lockup at the chest or upper bag edge; avoid merchandise pricing or purchase cues.",
+        "examples": [
+          {
+            "text": "Vuelta · Dale forma a tu pausa.",
+            "title": "Manos al barro."
+          },
+          {
+            "text": "Keep the symbol separate from the phrase. Allow a broad unprinted area so the object feels like workshop equipment, not a promotional collage.",
+            "title": "Print arrangement"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-36",
+        "title": "Piece wrapping",
+        "layout": "applications",
+        "summary": "Design study: adapt takeaway packaging to a ceramic-piece wrap. Use a plaster band with cobalt identity and a small clay panel; do not imply collection, shipping or included take-home pieces.",
+        "examples": [
+          {
+            "text": "Vuelta · Taller de cerámica",
+            "title": "Barro, forma y color."
+          },
+          {
+            "text": "Keep the logo on a flat, visible band. Place «Pieza de referencia» on display mockups rather than inventing product specifications or care guarantees.",
+            "title": "Wrapping layout"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-37",
+        "title": "Workshop arrival",
+        "layout": "applications",
+        "summary": "Design study: replace pickup instructions with conceptual workshop-location information. Show neighborhood, city, days and start times without an address, real map pin or invented directions.",
+        "examples": [
+          {
+            "text": "Ubicación conceptual. Martes a domingo, comienzos 10:00, 14:00 y 17:00. Cada experiencia dura 2 h.",
+            "title": "Laureles, Medellín"
+          },
+          {
+            "text": "Set the location above the cobalt table edge and the schedule below it. Do not draw a map that implies a real Vuelta venue.",
+            "title": "Location composition"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-38",
+        "title": "Booking controls",
+        "layout": "applications",
+        "summary": "Design study: /reservar starts with workshop, date, 1–4 attendees and live turns. Use cobalt selection, visible labels and normal page scroll; never cover controls with a floating action.",
+        "examples": [
+          {
+            "text": "Elige una fecha y de 1 a 4 asistentes. Consulta los turnos disponibles antes de continuar.",
+            "title": "Taller y turno"
+          },
+          {
+            "text": "Show server availability for Tuesday–Sunday at 10:00, 14:00 and 17:00, America/Bogota. Capacity is 8 per workshop, date and turn.",
+            "title": "Availability presentation"
+          },
+          {
+            "text": "No pudimos consultar la disponibilidad. Intenta de nuevo. Do not substitute invented places or offer local-only booking.",
+            "title": "No connection"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-39",
+        "title": "Reservation record",
+        "layout": "applications",
+        "summary": "Design study: /revision presents one specification, not a checkout receipt. /confirmacion shows success only after server confirmation, with the saved code and state rather than a generic celebratory check.",
+        "examples": [
+          {
+            "text": "Revisa tus datos. Todavía no hay una reserva guardada ni un cupo bloqueado.",
+            "title": "Antes de guardar"
+          },
+          {
+            "text": "Consulta el código, el estado y los datos confirmados. No se envían mensajes ni se procesan pagos.",
+            "title": "Reserva de demostración guardada"
+          },
+          {
+            "text": "Show workshop, date, time, attendees, name, email, phone and optional notes. Display the actual saved code; never prefill a fictional success record.",
+            "title": "Record hierarchy"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-40",
+        "title": "Reservation reference card",
+        "layout": "applications",
+        "summary": "Design study: replace a rewards card with a private reservation reference. Keep code, state and workshop together; do not invent points, stamps, membership tiers or discounts.",
+        "examples": [
+          {
+            "text": "Abre Mis reservas para consultar el taller, la fecha, el turno y el estado guardado.",
+            "title": "Tu reserva, a mano."
+          },
+          {
+            "text": "Use the card only inside the owner’s session. Do not place contact details, private identifiers or reservation codes in public artwork.",
+            "title": "Privacy rule"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-41",
+        "title": "Workshop sign",
+        "layout": "applications",
+        "summary": "Design study: adapt restaurant signage to a ceramics workshop. Use a cobalt name on plaster with generous clearspace and a smaller descriptor; the mockup must not imply an existing venue.",
+        "examples": [
+          {
+            "text": "Taller de cerámica",
+            "title": "Vuelta"
+          },
+          {
+            "text": "Use the complete horizontal lockup with 3x clearance from the sign edge. Keep the descriptor subordinate and omit invented street numbers.",
+            "title": "Sign proportions"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-42",
+        "title": "Booking website",
+        "layout": "applications",
+        "summary": "Design study: give every route the same editorial table system. Move from discovery to selection, review, server confirmation and private records; do not turn interiors into a generic dashboard.",
+        "examples": [
+          {
+            "text": "primera taza · 90.000 COP; torno inicial · 120.000 COP; esmaltes y color · 75.000 COP. Todas duran 2 h. Precios de ejemplo.",
+            "title": "Tres maneras de empezar"
+          },
+          {
+            "text": "Inicio / → Talleres /talleres → /reservar → /revision → /confirmacion. Preserve the chosen workshop and use «Guardar reserva» only after review.",
+            "title": "Reservar ahora"
+          },
+          {
+            "text": "/mis-reservas offers «Recargar» and «Abrir detalle» at /reserva. Keep records private, preserve input on errors and never replace Turso with simulated success.",
+            "title": "Mis reservas"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-43",
+        "title": "Favicon",
+        "layout": "logo",
+        "summary": "Design study: derive the favicon and app icons from the complete geometric master. Use a plaster support, preserve the open turn and keep the separate Vuelta name out of tiny icons.",
+        "examples": [
+          {
+            "text": "Taller de cerámica · Inicio",
+            "title": "Vuelta — Dale forma a tu pausa."
+          },
+          {
+            "text": "Export the same geometry for 16 and 32 px browser icons. Do not substitute a starter icon, letter V or newly drawn miniature mark.",
+            "title": "Small-format rule"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-44",
+        "title": "Stationery",
+        "layout": "applications",
+        "summary": "Design study: align the lockup, document heading and body to one left edge. Use a cobalt rule as the table boundary and leave generous plaster space for readable workshop notes.",
+        "examples": [
+          {
+            "text": "Barro, forma y color. Un espacio para observar el proceso.",
+            "title": "Notas de taller"
+          },
+          {
+            "text": "Use Bricolage 600 for the heading and Source Sans 400 for notes. Keep the footer free of invented addresses, registration numbers or staff names.",
+            "title": "Page structure"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-45",
+        "title": "Business cards",
+        "layout": "applications",
+        "summary": "Design study: make a workshop introduction card, not a fictional employee card. Put Vuelta and its invitation on the front, with conceptual location and workshop discovery on the reverse.",
+        "examples": [
+          {
+            "text": "Vuelta · Taller de cerámica",
+            "title": "Dale forma a tu pausa."
+          },
+          {
+            "text": "primera taza · torno inicial · esmaltes y color. Ubicación conceptual: Laureles, Medellín.",
+            "title": "Conoce los talleres"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-46",
+        "title": "Invitation card",
+        "layout": "applications",
+        "summary": "Design study: adapt the gift-card format into a non-redeemable workshop invitation. Do not add a stored value, redemption code, purchase action or booking entitlement.",
+        "examples": [
+          {
+            "text": "Conoce las tres experiencias de Vuelta y consulta los turnos disponibles.",
+            "title": "Una invitación a explorar."
+          },
+          {
+            "text": "Place the invitation above a cobalt edge and the workshop names below. No amount box, voucher number or «Canjear» control.",
+            "title": "Card hierarchy"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-47",
+        "title": "Packaging seal",
+        "layout": "applications",
+        "summary": "Design study: use a plaster seal with the complete cobalt symbol. Keep the name separately typeset when space allows; never turn the seal into a quality certification or product guarantee.",
+        "examples": [
+          {
+            "text": "Barro, forma y color.",
+            "title": "Vuelta"
+          },
+          {
+            "text": "Center the full mark with 2x clearspace. Keep it away from folds and omit claims such as «Hecho en Medellín» or «Calidad certificada».",
+            "title": "Seal placement"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-48",
+        "title": "Customer support",
+        "layout": "applications",
+        "summary": "Design study: help through clear inline states and safe actions, not invented support channels. Preserve input, distinguish empty from error and confirm cancellation before changing the saved state.",
+        "examples": [
+          {
+            "text": "Explora los talleres y elige una experiencia. Puedes volver aquí para consultar tus reservas guardadas.",
+            "title": "Aún no tienes reservas."
+          },
+          {
+            "text": "Tus datos siguen aquí. Elige otro turno y vuelve a revisar antes de guardar.",
+            "title": "Este turno ya no tiene cupo."
+          },
+          {
+            "text": "Al confirmar, se liberan sus plazas. Confirmar cancelación · Volver. Keep the state unchanged until the server confirms.",
+            "title": "¿Cancelar esta reserva?"
+          }
+        ]
+      },
+      {
+        "id": "brand-page-49",
+        "title": "Thank you",
+        "layout": "cover",
+        "summary": "This guide presents an original identity proposed for this project, with examples of its visual and editorial use.",
+        "examples": [
+          {
+            "text": "Vuelta · Taller de cerámica",
+            "title": "Dale forma a tu pausa."
+          },
+          {
+            "text": "Business examples and design direction: supplied brief. Fonts: supplied Google Fonts resources for Bricolage Grotesque and Source Sans 3.",
+            "title": "Identity and type sources"
+          },
+          {
+            "text": "Violinistman, CC BY 4.0 · commons.wikimedia.org/wiki/File:Hands_of_the_pottery_maker_in_Egypt_2024.jpg · Cropped applications; representative image from Egypt.",
+            "title": "Photograph source"
+          }
+        ]
+      }
+    ],
+    "voice": "Español cercano, concreto y colombiano sin caricaturas. Hablar de manos, barro, tiempo y exploración; orientar con verbos claros. Mantener «Dale forma a tu pausa.» como titular. Sin promesas terapéuticas, reseñas inventadas, credenciales ni jerga técnica en la experiencia pública.",
+    "colors": [
+      {
+        "hex": "#F5F0E7",
+        "name": "Workshop Plaster",
+        "role": "background"
+      },
+      {
+        "hex": "#C65D42",
+        "name": "Warm Clay",
+        "role": "surface"
+      },
+      {
+        "hex": "#254DA6",
+        "name": "Turning Cobalt",
+        "role": "accent"
+      },
+      {
+        "hex": "#242B32",
+        "name": "Kiln Charcoal",
+        "role": "text"
+      },
+      {
+        "hex": "#625B55",
+        "name": "Quiet Earth",
+        "role": "muted"
+      }
+    ],
+    "origin": "proposed",
+    "markSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\"><path fill=\"#254DA6\" d=\"M132 118H80A42 42 0 1 1 122 76V82H136V76A56 56 0 1 0 80 132H132Z\"/></svg>",
+    "sources": [
+      "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap"
+    ],
+    "version": 1,
+    "fontFaces": [
+      {
+        "url": "https://odifhpxpphpkaucgsthd.supabase.co/storage/v1/object/public/screenshots/projects/P-KUFJZZ/brand/fonts/b56db40c26850f83ba2ebffa1f7faa01e5ee4e55ac63decee1433de520a38483.ttf",
+        "family": "Bricolage Grotesque",
+        "sha256": "b56db40c26850f83ba2ebffa1f7faa01e5ee4e55ac63decee1433de520a38483",
+        "weight": "400",
+        "originalUrl": "https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvRviyM0.ttf",
+        "availableWeights": [
+          "400",
+          "500",
+          "600",
+          "700"
+        ]
+      },
+      {
+        "url": "https://odifhpxpphpkaucgsthd.supabase.co/storage/v1/object/public/screenshots/projects/P-KUFJZZ/brand/fonts/e1b454f5469f3d0d98c117651a4d15a8345ad77b50f09540b5cf61e82511b563.ttf",
+        "family": "Bricolage Grotesque",
+        "sha256": "e1b454f5469f3d0d98c117651a4d15a8345ad77b50f09540b5cf61e82511b563",
+        "weight": "500",
+        "originalUrl": "https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvSniyM0.ttf",
+        "availableWeights": [
+          "400",
+          "500",
+          "600",
+          "700"
+        ]
+      },
+      {
+        "url": "https://odifhpxpphpkaucgsthd.supabase.co/storage/v1/object/public/screenshots/projects/P-KUFJZZ/brand/fonts/284891c74c258cff7233962e048d9470bfb9fc326b53dd0bca408789297c3409.ttf",
+        "family": "Bricolage Grotesque",
+        "sha256": "284891c74c258cff7233962e048d9470bfb9fc326b53dd0bca408789297c3409",
+        "weight": "600",
+        "originalUrl": "https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvcXlyM0.ttf",
+        "availableWeights": [
+          "400",
+          "500",
+          "600",
+          "700"
+        ]
+      },
+      {
+        "url": "https://odifhpxpphpkaucgsthd.supabase.co/storage/v1/object/public/screenshots/projects/P-KUFJZZ/brand/fonts/913ee3631949ee1b4fb2601269412fca5775eb994d4f87be2c366c94ac123dc5.ttf",
+        "family": "Bricolage Grotesque",
+        "sha256": "913ee3631949ee1b4fb2601269412fca5775eb994d4f87be2c366c94ac123dc5",
+        "weight": "700",
+        "originalUrl": "https://fonts.gstatic.com/s/bricolagegrotesque/v9/3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiaaD30YfKfjZZoLvfzlyM0.ttf",
+        "availableWeights": [
+          "400",
+          "500",
+          "600",
+          "700"
+        ]
+      },
+      {
+        "url": "https://odifhpxpphpkaucgsthd.supabase.co/storage/v1/object/public/screenshots/projects/P-KUFJZZ/brand/fonts/20ab9752bd19a373dba627393b6c142e6cf8fc2f219119a8e0cb1442ef679ec5.ttf",
+        "family": "Source Sans 3",
+        "sha256": "20ab9752bd19a373dba627393b6c142e6cf8fc2f219119a8e0cb1442ef679ec5",
+        "weight": "400",
+        "originalUrl": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Ky461EN.ttf",
+        "availableWeights": [
+          "400",
+          "500",
+          "600",
+          "700"
+        ]
+      },
+      {
+        "url": "https://odifhpxpphpkaucgsthd.supabase.co/storage/v1/object/public/screenshots/projects/P-KUFJZZ/brand/fonts/bec4ffe926595df756b5a1e39a9f704debfab88055d9a157f978eb500444dd28.ttf",
+        "family": "Source Sans 3",
+        "sha256": "bec4ffe926595df756b5a1e39a9f704debfab88055d9a157f978eb500444dd28",
+        "weight": "500",
+        "originalUrl": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8KyK61EN.ttf",
+        "availableWeights": [
+          "400",
+          "500",
+          "600",
+          "700"
+        ]
+      },
+      {
+        "url": "https://odifhpxpphpkaucgsthd.supabase.co/storage/v1/object/public/screenshots/projects/P-KUFJZZ/brand/fonts/950e66c48e5e60c9407421d0fa601047176f17e0d22a598bbd084dde45a98be2.ttf",
+        "family": "Source Sans 3",
+        "sha256": "950e66c48e5e60c9407421d0fa601047176f17e0d22a598bbd084dde45a98be2",
+        "weight": "600",
+        "originalUrl": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kxm7FEN.ttf",
+        "availableWeights": [
+          "400",
+          "500",
+          "600",
+          "700"
+        ]
+      },
+      {
+        "url": "https://odifhpxpphpkaucgsthd.supabase.co/storage/v1/object/public/screenshots/projects/P-KUFJZZ/brand/fonts/83a72786970a93a8c48eaead886c995676d512c0ee7164138f8ea76ea847d75c.ttf",
+        "family": "Source Sans 3",
+        "sha256": "83a72786970a93a8c48eaead886c995676d512c0ee7164138f8ea76ea847d75c",
+        "weight": "700",
+        "originalUrl": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kxf7FEN.ttf",
+        "availableWeights": [
+          "400",
+          "500",
+          "600",
+          "700"
+        ]
+      }
+    ],
+    "positioning": "Identidad original propuesta para un taller ficticio de cerámica en Laureles, Medellín. Una invitación cercana a hacer una pausa de dos horas con barro, torno y color. Experiencias, ubicación y precios de ejemplo, con reservas de demostración realmente guardadas.",
+    "researchStatus": "not_requested",
+    "tokenSemanticsVersion": 1
+  },
+  "textColor": "#242B32",
+  "accentColor": "#254DA6",
+  "fontHeading": "Bricolage Grotesque",
+  "borderRadius": "0.5rem",
+  "logoImageUrl": null,
+  "primaryColor": "#254DA6",
+  "secondaryColor": "#C65D42",
+  "backgroundColor": "#F5F0E7"
+}

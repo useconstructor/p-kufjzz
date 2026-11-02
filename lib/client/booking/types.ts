@@ -1,0 +1,25 @@
+export type Resource = { id: string; version: number; url: string; sha256: string; alt: string; width?: number; height?: number };
+export type Option = { id: string; nombre: string; descripcion: string; precio: number; duracionMinutos: number; recursos: Resource[] };
+export type Policy = { diasSemana: number[]; horas: string[]; minPersonas: number; maxPersonas: number; capacidad: number; capacidadCompartida: boolean };
+export type Catalog = { version: number; presentacionVersion: number; moneda: string; zonaHoraria: string; opciones: Option[]; politica: Policy };
+export type RawDraft = { opcion: string; fecha: string; hora: string; nombre: string; email: string; telefono: string; personas: string; notas: string; catalogoVersion: number | null; presentacionVersion: number | null; paso: string };
+export type CreatePayload = Omit<RawDraft, 'personas' | 'paso' | 'catalogoVersion' | 'presentacionVersion'> & { personas: number; catalogoVersion: number; presentacionVersion: number };
+export type Pending = { tipo: 'crear'; clave: string; payload: CreatePayload } | { tipo: 'cancelar'; clave: string; payload: { id: string } };
+export type Reservation = { id: string; codigo: string; opcion: string; opcionNombre: string; opcionDescripcion: string; precio: number; moneda: string; duracionMinutos: number; fecha: string; hora: string; zonaHoraria: string; inicioUtc: string; finUtc: string; nombre: string; email: string; telefono: string; personas: number; notas: string; estado: 'activa' | 'cancelada'; catalogoVersion: number; presentacionVersion: number; recursos: Resource[]; createdAt: string; updatedAt: string; cancelledAt: string | null };
+export type ReviewSnapshot = { payload: CreatePayload; opcion: Option; moneda: string; zonaHoraria: string; revision: number; reviewedAt: string };
+export type DraftEnvelope = { draft: RawDraft | null; pending: Pending | null; recoveries?: Pending[]; revision: number; lastValid: ReviewSnapshot | null };
+export type DraftConflict = { localDraft: RawDraft; server: DraftEnvelope };
+export type Availability = { opcion: string; fecha: string; turnos: { hora: string; disponibles: number }[] };
+export type Field = keyof RawDraft;
+export type FieldErrors = Partial<Record<Field, string>>;
+export type ClientProblem = { code: string; message: string; field?: string; status?: number };
+export type BookingPhase = 'idle' | 'loading' | 'editing' | 'review' | 'saving' | 'unconfirmed' | 'rejected' | 'confirmed' | 'session-blocked' | 'error';
+export type BookingState = {
+  phase: BookingPhase; catalog: Catalog | null; draft: RawDraft; pending: Pending | null;
+  recoveries: Pending[]; record: Reservation | null; reservations: Reservation[];
+  errors: FieldErrors; firstErrorField: Field | null; problem: ClientProblem | null;
+  editingRequiresChoice: boolean; referenceError: string | null;
+  availability: Availability | null; availabilityLoading: boolean; mediaReady: boolean;
+  revision: number; lastValid: ReviewSnapshot | null; draftConflict: DraftConflict | null;
+};
+export const emptyDraft = (): RawDraft => ({ opcion: '', fecha: '', hora: '', nombre: '', email: '', telefono: '', personas: '1', notas: '', catalogoVersion: null, presentacionVersion: null, paso: 'opcion-turno' });

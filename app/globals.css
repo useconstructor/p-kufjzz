@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@font-face { font-family: "Bricolage Grotesque"; src: url("./fonts/bricolage-grotesque-400.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Bricolage Grotesque"; src: url("./fonts/bricolage-grotesque-500.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Bricolage Grotesque"; src: url("./fonts/bricolage-grotesque-600.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Bricolage Grotesque"; src: url("./fonts/bricolage-grotesque-700.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Source Sans 3"; src: url("./fonts/source-sans-3-400.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Source Sans 3"; src: url("./fonts/source-sans-3-500.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Source Sans 3"; src: url("./fonts/source-sans-3-600.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Source Sans 3"; src: url("./fonts/source-sans-3-700.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root {
+  --brand-background: #F5F0E7;
+  --brand-surface: #F5F0E7;
+  --brand-primary: #254DA6;
+  --brand-accent: #C65D42;
+  --brand-text: #242B32;
+  --brand-muted: #625B55;
+  --brand-success: #285B43;
+  --brand-font-heading: "Bricolage Grotesque", sans-serif;
+  --brand-font-body: "Source Sans 3", sans-serif;
+  --brand-radius: .5rem;
+}
+@theme inline {
+  --font-sans: var(--brand-font-body);
+  --font-heading: var(--brand-font-heading);
+  --color-brand-background: var(--brand-background);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-text: var(--brand-text);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-success: var(--brand-success);
+  --color-background: var(--brand-background);
+  --color-foreground: var(--brand-text);
+  --color-card: var(--brand-surface);
+  --color-card-foreground: var(--brand-text);
+  --color-primary: var(--brand-primary);
+  --color-primary-foreground: var(--brand-background);
+  --color-secondary: var(--brand-background);
+  --color-secondary-foreground: var(--brand-primary);
+  --color-muted: var(--brand-surface);
+  --color-muted-foreground: var(--brand-muted);
+  --color-accent: var(--brand-accent);
+  --color-accent-foreground: var(--brand-text);
+  --color-destructive: #9d321f;
+  --color-border: var(--brand-muted);
+  --color-input: var(--brand-muted);
+  --color-ring: var(--brand-primary);
+  --radius: var(--brand-radius);
+}
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-padding-top: 1rem; }
+  body { margin: 0; background: var(--brand-background); color: var(--brand-text); font-family: var(--brand-font-body); font-size: 16px; line-height: 1.5; font-synthesis: none; }
+  h1, h2, h3, h4 { font-family: var(--brand-font-heading); }
+  button, input, textarea, select { font: inherit; }
+  button, a, input, textarea, select, summary { -webkit-tap-highlight-color: transparent; }
+  button:not(:disabled), summary { cursor: pointer; }
+  :focus-visible { outline: 3px solid var(--brand-primary); outline-offset: 4px; }
+  [class*="bg-brand-primary"] :focus-visible { outline-color: var(--brand-background); box-shadow: 0 0 0 2px var(--brand-primary); }
+  main:focus { outline: none; }
+  ::selection { background: var(--brand-primary); color: var(--brand-background); }
+}
+@layer components {
+  .brand-button { @apply inline-flex min-h-11 items-center justify-center gap-3 border border-brand-primary bg-brand-primary px-5 py-2.5 text-base font-semibold text-brand-background transition-colors duration-200 hover:bg-brand-text hover:border-brand-text disabled:cursor-wait disabled:opacity-60 motion-reduce:transition-none; }
+  .brand-button-light { @apply inline-flex min-h-11 items-center justify-center gap-3 border border-brand-background bg-brand-background px-5 py-2.5 text-base font-semibold text-brand-primary transition-colors duration-200 hover:bg-white motion-reduce:transition-none; }
+  .brand-link { @apply inline-flex min-h-11 items-center gap-2 text-base font-semibold text-brand-primary underline decoration-brand-primary/40 underline-offset-4 hover:decoration-brand-primary; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
