@@ -92,8 +92,12 @@ export default function HomePage() {
         </div>
         <figure className="self-center border-y border-brand-primary/30 bg-brand-accent/[.07] px-5 py-6 md:px-8 md:py-10">
           <div className="flex items-center justify-between gap-4 text-sm text-brand-primary"><span className="font-semibold tracking-[.12em] uppercase">Cuaderno de formas</span><span aria-hidden="true">↙</span></div>
-          <PieceStudies />
-          <figcaption><p className="font-heading text-2xl text-brand-primary">Un asa. Un borde. Una huella.</p><p className="mt-2 text-base text-brand-muted">Taza, cuenco y muestras de color: ilustraciones de referencia, no resultados garantizados ni fotografías de piezas del taller.</p></figcaption>
+          <div className="grid grid-cols-[1.15fr_1fr] items-center py-4">
+            <img src="/images/vuelta-study-taza.svg" width={420} height={300} alt="Estudio original de taza modelada a mano." className="h-auto w-full" />
+            <img src="/images/vuelta-study-torno.svg" width={420} height={300} alt="Estudio original de presión y paredes en el torno." className="h-auto w-full" />
+            <div className="col-span-2 grid grid-cols-[1fr_1.15fr] items-center border-t border-brand-primary/20 pt-2"><p className="text-sm leading-5 text-brand-primary">Barro en capas.<br />Color en pruebas.<br />La huella del gesto.</p><img src="/images/vuelta-study-esmaltes.svg" width={420} height={300} alt="Estudio original de muestras y capas de esmalte." className="h-auto w-full" /></div>
+          </div>
+          <figcaption><p className="font-heading text-2xl text-brand-primary">Un asa. Un borde. Una huella.</p><p className="mt-2 text-base text-brand-muted">Modelado, torno y color: estudios originales de técnicas sobre una mesa imaginada. No son fotografías, piezas de clientes ni resultados garantizados.</p></figcaption>
         </figure>
       </section>
 

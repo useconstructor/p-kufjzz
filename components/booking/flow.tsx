@@ -30,6 +30,7 @@ export function BookingFlow({ reviewPage = false }: { reviewPage?: boolean }) {
   const [mediaEpoch, setMediaEpoch] = useState(0);
   const [showAllTimes, setShowAllTimes] = useState(false);
   const initialized = useRef(false);
+  const initiallyEmptyNewDraft = useRef<boolean | null>(null);
   const { catalog, draft } = state;
   const option = catalog?.opciones.find(o => o.id === draft.opcion);
   const historical = state.pending?.tipo === 'crear' && state.lastValid?.payload.opcion === state.pending.payload.opcion && state.lastValid.payload.catalogoVersion === state.pending.payload.catalogoVersion && state.lastValid.payload.presentacionVersion === state.pending.payload.presentacionVersion ? state.lastValid.opcion : null;
@@ -43,6 +44,16 @@ export function BookingFlow({ reviewPage = false }: { reviewPage?: boolean }) {
   const zone = catalog?.zonaHoraria;
 
   useEffect(() => {
+    const capture = () => {
+      const current = controller.getSnapshot();
+      if (!current.catalog || initiallyEmptyNewDraft.current !== null) return;
+      const raw = current.draft;
+      initiallyEmptyNewDraft.current = current.revision === 0 && !current.pending && !current.recoveries.length && !current.draftConflict && !current.lastValid && !current.record && !raw.opcion && !raw.fecha && !raw.hora && !raw.nombre && !raw.email && !raw.telefono && !raw.notas && raw.paso === 'opcion-turno' && raw.personas === String(current.catalog.politica.minPersonas);
+    };
+    capture(); return controller.subscribe(capture);
+  }, [controller]);
+
+  useEffect(() => {
     if (!version || initialized.current) return;
     initialized.current = true;
     const current = controller.getSnapshot();
@@ -51,8 +62,8 @@ export function BookingFlow({ reviewPage = false }: { reviewPage?: boolean }) {
     setStep(requested === 'contacto' || (requested !== 'opcion-turno' && current.draft.paso === 'contacto') ? 'contacto' : 'opcion-turno');
     if (reviewPage || current.pending) return;
     const patch: Partial<RawDraft> = {};
-    if (!current.draft.opcion && !reference.present && current.catalog!.opciones.length === 1) patch.opcion = current.catalog!.opciones[0].id;
-    if (!current.draft.fecha) patch.fecha = nextScheduledDate(current.catalog!);
+    if (initiallyEmptyNewDraft.current === true && !current.draft.opcion && !reference.present && current.catalog!.opciones.length === 1) patch.opcion = current.catalog!.opciones[0].id;
+    if (initiallyEmptyNewDraft.current === true && current.revision <= 1 && !current.lastValid && !current.record && !current.recoveries.length && !current.draftConflict && !current.draft.fecha && !current.draft.hora && !current.draft.nombre && !current.draft.email && !current.draft.telefono && !current.draft.notas && current.draft.paso === 'opcion-turno') patch.fecha = nextScheduledDate(current.catalog!);
     if (Object.keys(patch).length) void controller.editDraft({ ...patch, catalogoVersion: current.catalog!.version, presentacionVersion: current.catalog!.presentacionVersion }).catch(() => {});
   }, [controller, version, reviewPage]);
 
@@ -171,7 +182,7 @@ export function BookingFlow({ reviewPage = false }: { reviewPage?: boolean }) {
           </section> : <section className="mt-3"><WorkshopEdge serviceName={option?.nombre} status={unavailable ? 'warning' : 'neutral'}><div data-booking-selection>{formatDate(draft.fecha)} · {draft.hora} · {draft.personas} personas{unavailable && <strong className="ml-2">No disponible</strong>}</div></WorkshopEdge><div className="my-4 flex flex-wrap items-center justify-between gap-2"><SectionHeading>Tus datos</SectionHeading><button type="button" className={textLinkClass + ' text-sm'} onClick={() => { setStep('opcion-turno'); focus.requestFocus('opcion'); }}>Cambiar taller o turno</button></div><p className="mb-5 text-sm">Solo los usaremos en esta demostración. No enviaremos mensajes.</p><div className="grid gap-4 sm:grid-cols-2">{(['nombre', 'email', 'telefono'] as const).map(field => <div key={field} className={field === 'nombre' ? 'sm:col-span-2' : ''}><label htmlFor={field} className="mb-1 block font-semibold">{fieldLabels[field]}</label><Input id={field} name={field} ref={focus.targetRef(field)} type={field === 'email' ? 'email' : field === 'telefono' ? 'tel' : 'text'} autoComplete={field === 'nombre' ? 'name' : field === 'telefono' ? 'tel' : 'email'} value={draft[field]} onChange={event => edit(field, event.target.value)} {...accessibility(field)} className={fieldClass} />{fieldError(field)}{field === 'telefono' && <p className="mt-1 text-sm text-[var(--brand-muted)]">De 7 a 15 dígitos; puedes usar +, espacios, paréntesis y guiones.</p>}</div>)}<div className="sm:col-span-2"><label htmlFor="notas" className="mb-1 block font-semibold">Notas <span className="font-normal">(opcional)</span></label><Textarea id="notas" name="notas" ref={focus.targetRef('notas')} rows={4} value={draft.notas} onChange={event => edit('notas', event.target.value)} {...accessibility('notas')} className={fieldClass + ' h-auto min-h-28 resize-y'} /><p className="mt-1 text-sm text-[var(--brand-muted)]">Hasta 2000 caracteres.</p>{fieldError('notas')}</div></div></section>}
           {step === 'contacto' && <div className="mt-5 flex flex-wrap items-center gap-4"><Action type="submit" data-booking-action={step === 'contacto' ? 'continue-review' : 'continue'} disabled={busy || state.phase === 'saving' || !!state.draftConflict}>{busy ? 'Un momento…' : step === 'contacto' ? 'Continuar a revisión' : 'Continuar'}<ArrowRight size={18} aria-hidden="true" /></Action>{step === 'contacto' && <button type="button" className={textLinkClass} onClick={() => { setStep('opcion-turno'); focus.requestFocus('opcion'); }}>Volver</button>}</div>}
         </form>}
-        {state.lastValid && !reviewPage && <details className="mt-6 border-t border-[var(--brand-muted)] pt-3"><summary className="min-h-11 cursor-pointer py-2 text-sm font-semibold">Ver última revisión válida</summary><p className="mb-3 text-sm">Es una revisión anterior; no confirma los datos que estás editando ni una reserva guardada.</p><DraftDetails draft={state.lastValid.payload} /></details>}
+        {state.lastValid && !reviewPage && <details className="mt-6 border-t border-[var(--brand-muted)] pt-3"><summary className="min-h-11 cursor-pointer py-2 text-sm font-semibold">Ver última revisión válida</summary><p className="mb-3 text-sm">Es una revisión anterior; no confirma los datos que estás editando ni una reserva guardada.</p><div className="mb-3 max-w-xs">{state.lastValid.opcion.recursos[0] && <ContextMedia resource={state.lastValid.opcion.recursos[0]} variant="ritual" />}</div><DraftDetails draft={state.lastValid.payload} /></details>}
         {!reviewPage && priceSummary}
         <PhotoCredit className="mt-4 max-w-3xl md:mt-6" />
       </>}

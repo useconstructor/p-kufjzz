@@ -64,12 +64,8 @@ export function BrandSteps({ current, className }: { current: string; className?
 export function CraftStudy({ name, className }: { name: string; className?: string }) {
   const kind = /taza/i.test(name) ? 'cup' : /torno/i.test(name) ? 'wheel' : /esmalte|color/i.test(name) ? 'color' : null;
   if (!kind) return null;
-  return <svg viewBox="0 0 180 120" fill="none" role="img" aria-label={`Estudio ilustrado: ${name}. Referencia de técnica, no resultado garantizado.`} className={cx('h-auto w-32 text-brand-primary', className)}>
-    <path d="M12 103C-2 47 38 7 91 9C151 9 179 45 166 86" stroke="currentColor" strokeWidth="1.5" opacity=".35" />
-    <g stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-      {kind === 'cup' ? <><path d="M43 39Q74 28 107 39L103 88Q76 103 47 88Z" fill="#C65D42" fillOpacity=".22" /><ellipse cx="75" cy="39" rx="32" ry="8" /><path d="M108 47C145 34 147 87 105 80M109 58C128 50 129 72 107 70M52 61L54 79M61 66L63 87" /><path d="M32 104Q85 112 136 100" opacity=".4" /></> : kind === 'wheel' ? <><ellipse cx="90" cy="95" rx="64" ry="12" /><path d="M57 48Q90 61 123 48L115 79Q91 91 65 79Z" fill="#C65D42" fillOpacity=".3" /><ellipse cx="90" cy="48" rx="33" ry="9" /><path d="M61 59Q90 71 120 59M64 70Q89 81 117 70M78 107V114M103 107V114M23 76Q13 61 27 48M24 48L27 57M27 48L18 49" /></> : <><path d="M38 29L78 24L85 72L45 78Z" fill="#254DA6" /><path d="M99 38L139 44L132 91L92 85Z" fill="#C65D42" /><path d="M58 79L97 76L100 108L61 111Z" fill="#F5F0E7" /><path d="M102 53L128 57M100 63L126 67M69 88L88 87M70 97L89 96" /><circle cx="57" cy="38" r="3" fill="#F5F0E7" stroke="none" /></>}
-    </g>
-  </svg>;
+  const study = kind === 'cup' ? 'taza' : kind === 'wheel' ? 'torno' : 'esmaltes';
+  return <img src={`/images/vuelta-study-${study}.svg`} width={420} height={300} alt={`Estudio original ilustrado: ${name}. Referencia de técnica, no fotografía ni resultado garantizado.`} className={cx('h-auto w-32 text-brand-primary', className)} />;
 }
 
 export function WorkshopEdge({ serviceName, status = 'neutral', children, action, className }: { serviceName?: string; status?: 'neutral' | 'pending' | 'warning' | 'confirmed' | 'cancelled'; children?: ReactNode; action?: ReactNode; className?: string }) {
