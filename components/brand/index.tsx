@@ -20,6 +20,7 @@ const navigation = [{ href: '/', label: 'Inicio' }, { href: '/talleres', label: 
 
 export function BrandShell({ children, className }: { children: ReactNode; className?: string }) {
   const pathname = usePathname();
+  const compactFooter = /^\/(reservar|revision|confirmacion|detalle-reserva|mis-reservas|reserva)(?:\/|$)/.test(pathname);
   const menuTrigger = useRef<HTMLButtonElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const menu = useNativeBookingDialog({ triggerRef: menuTrigger, onClose: () => setMenuOpen(false) });
@@ -42,8 +43,8 @@ export function BrandShell({ children, className }: { children: ReactNode; class
       <nav aria-label="Navegación móvil" className="flex flex-col">{[...navigation, { href: '/reservar', label: 'Reservar un taller' }].map(item => <Link key={item.href} href={item.href} onClick={() => menu.close()} aria-current={pathname === item.href ? 'page' : undefined} className="border-t border-brand-primary/25 py-4 text-xl font-semibold text-brand-primary">{item.label}</Link>)}</nav>
     </dialog>
     {children}
-    <footer className="mt-8 border-t border-brand-primary/30 md:mt-16">
-      <div className="mx-auto max-w-[1280px] px-5 py-8 md:px-8 xl:px-0">
+    <footer className={cx("border-t border-brand-primary/30", compactFooter ? "mt-4 md:mt-6" : "mt-8 md:mt-16")}>
+      <div className={cx("mx-auto max-w-[1280px] px-5 md:px-8 xl:px-0", compactFooter ? "py-5" : "py-8")}>
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-start"><div><BrandLogo /><p className="mt-2 text-sm text-brand-muted">Barro, torno y color.</p></div><nav aria-label="Enlaces del pie de página" className="flex flex-wrap gap-x-6 gap-y-2">{navigation.map(item => <Link key={item.href} href={item.href} className="inline-flex min-h-11 items-center text-base underline decoration-brand-primary/40 underline-offset-4">{item.label}</Link>)}<Link href="/#creditos" className="inline-flex min-h-11 items-center text-base underline decoration-brand-primary/40 underline-offset-4">Créditos fotográficos</Link></nav></div>
         <p data-demo-notice className="mt-6 max-w-3xl border-t border-brand-primary/20 pt-4 text-sm leading-5 text-brand-muted">Vuelta es un taller ficticio. Ubicación, experiencias y precios de ejemplo. Las reservas son de demostración; no se realizan pagos ni se envían mensajes.</p>
       </div>
