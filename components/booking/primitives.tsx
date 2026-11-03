@@ -1,6 +1,6 @@
 'use client';
 
-import { forwardRef, useRef, type ButtonHTMLAttributes, type ReactNode } from 'react';
+import { forwardRef, useRef, useState, type ButtonHTMLAttributes, type ReactNode } from 'react';
 import { ArrowRight, RefreshCw, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { VerifiedBookingMedia, useNativeBookingDialog } from '@/lib/client/booking/presentation';
@@ -20,7 +20,8 @@ export function PhotoCredit({ className }: { className?: string }) {
 
 export function ContextMedia({ resource, variant, onReady, className }: { resource: Resource; variant: 'hero' | 'compact' | 'ritual'; onReady?: (resource: Resource, ready: boolean) => void; className?: string }) {
   const opener = useRef<HTMLButtonElement>(null);
-  const dialog = useNativeBookingDialog({ triggerRef: opener });
+  const [viewerOpen, setViewerOpen] = useState(false);
+  const dialog = useNativeBookingDialog({ triggerRef: opener, onClose: () => setViewerOpen(false) });
   const compact = variant === 'compact';
   const frame = compact ? 'h-[96px] w-full sm:h-[128px]' : 'aspect-[5/4] w-full';
   return <figure className={cn('grid min-w-0 grid-cols-1 grid-rows-[auto_auto_auto] items-start gap-y-1', className)}>
@@ -29,11 +30,11 @@ export function ContextMedia({ resource, variant, onReady, className }: { resour
       onDispose={current => { if (current) onReady?.(current, false); }}
       renderPending={<span role="status" className="p-3 text-sm">Cargando fotografía…</span>}
       renderError={({ retry }) => <div role="alert" className="flex h-full w-full flex-col items-start justify-center gap-1 p-2 text-sm leading-4"><span>Fotografía no disponible.</span><button type="button" onClick={retry} className={cn(textLinkClass, 'text-sm')}><RefreshCw size={14} aria-hidden="true" /> Reintentar imagen</button></div>} />
-    <button ref={opener} type="button" onClick={dialog.open} aria-label="Ver fotografía completa" className={cn(textLinkClass, 'row-start-2 min-h-11 w-fit max-w-full gap-1 text-left text-xs leading-4')}><span className="whitespace-nowrap">Foto completa <ArrowRight className="inline-block" size={12} aria-hidden="true" /></span></button>
+    <button ref={opener} type="button" onClick={() => { dialog.open(); setViewerOpen(true); }} aria-label="Ver fotografía completa" className={cn(textLinkClass, 'row-start-2 min-h-11 w-fit max-w-full gap-1 text-left text-xs leading-4')}><span className="whitespace-nowrap">Foto completa <ArrowRight className="inline-block" size={12} aria-hidden="true" /></span></button>
     {!compact && <PhotoCredit />}
     <dialog ref={dialog.dialogRef} aria-label="Fotografía completa de manos modelando barro en el torno" className="m-auto w-[min(92vw,960px)] max-w-none rounded-[var(--brand-radius)] border border-[var(--brand-text)] bg-[var(--brand-background)] p-4 text-[var(--brand-text)] backdrop:bg-black/65 sm:p-6">
       <div className="mb-3 flex items-center justify-between gap-3"><h2 className="font-[family-name:var(--brand-font-heading)] text-xl">Manos en el torno</h2><Action secondary onClick={() => dialog.close()} aria-label="Cerrar fotografía"><X size={18} aria-hidden="true" /></Action></div>
-      <VerifiedBookingMedia resource={resource} containerClassName="grid h-[min(58vh,600px)] place-items-center" className="h-full w-full object-contain object-center" renderPending={<p role="status">Cargando fotografía…</p>} renderError={({ retry }) => <div role="alert"><p>No pudimos abrir la fotografía completa.</p><Action secondary onClick={retry}>Reintentar imagen</Action></div>} />
+      {viewerOpen && <VerifiedBookingMedia resource={resource} containerClassName="grid h-[min(58vh,600px)] place-items-center" className="h-full w-full object-contain object-center" renderPending={<p role="status">Cargando fotografía…</p>} renderError={({ retry }) => <div role="alert"><p>No pudimos abrir la fotografía completa.</p><Action secondary onClick={retry}>Reintentar imagen</Action></div>} />}
       <PhotoCredit className="mt-3" />
     </dialog>
   </figure>;
