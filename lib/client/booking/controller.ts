@@ -124,6 +124,9 @@ export class BookingController {
       try { data = await response.json(); } catch { throw new BookingError('INVALID_RESPONSE', 'No pudimos leer la respuesta del servidor.', response.status); }
       if (!response.ok || data.ok !== true) throw new BookingError(data.error?.code || 'REQUEST_FAILED', data.error?.message || 'No pudimos completar la solicitud.', response.status, data.error?.field);
       return data.data as T;
+    } catch (error) {
+      if (!(error instanceof BookingError) && method === 'GET') throw new BookingError('NETWORK_READ', 'No pudimos consultar la información. Comprueba tu conexión y vuelve a intentarlo.');
+      throw error;
     } finally { clearTimeout(timer); }
   }
   ensureSession = (): Promise<void> => {
